@@ -74,40 +74,33 @@ export default function Footer() {
               className="flex space-x-4"
             >
               <Link
-                href="#"
+                href="https://www.facebook.com/people/Shohruhbek-Rajabov/pfbid0oyE6kkc2hYWL69QnrtYbizi53WKJ51Mw9Mj8p9Q3gGmvoaYp1ynkPVC69PPcbaWzl/"
                 className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link
-                href="#"
-                className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link
-                href="#"
+                href="https://www.linkedin.com/in/ardent-soft-558979355/"
                 className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/ardent_soft/"
                 className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link
+              {/* <Link
                 href="#"
                 className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Github className="h-5 w-5" />
                 <span className="sr-only">Github</span>
-              </Link>
+              </Link> */}
             </motion.div>
           </div>
           <motion.div
