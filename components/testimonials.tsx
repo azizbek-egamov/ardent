@@ -69,8 +69,8 @@ export default function Testimonials() {
   }
 
   return (
-    <section id="testimonials" className="section-container relative">
-      {/* Background elements
+    <section id="testimonials" >
+      {/* Background elements className="section-container relative"
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[url('/images/abstract-tech.jpg')] bg-cover bg-center opacity-5"></div>
         <div className="absolute inset-0 backdrop-blur-3xl"></div>
