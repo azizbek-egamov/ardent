@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, ExternalLink } from "lucide-react"
 import { useApp } from "@/lib/context/AppContext"
+import Link from "next/link" // Link komponentini import qiling
 
 const Projects = () => {
   const { t, language } = useApp()
@@ -150,53 +151,27 @@ const Projects = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-[500px] overflow-hidden border-0 glass-card group">
-                  <CardContent className="p-0 flex flex-col h-full">
-                    <div className="relative h-72 w-full overflow-hidden">
-                      <Image
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title[language]}
-                        fill
-                        className="object-contain transition-transform duration-700 group-hover:scale-105"
-                        quality={90}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6">
-                        {/* <Button
-                          variant="outline"
-                          className="text-white border-white bg-black/20 backdrop-blur-sm hover:bg-white hover:text-black transition-colors duration-300"
-                        >
-                          <span className="flex items-center gap-2">
-                            {t("projects.viewProject") || "View Project"} <ExternalLink className="h-4 w-4" />
-                          </span>
-                        </Button> */}
+                <Link href={`/projects/${index}`} passHref>
+                  <Card className="h-[500px] overflow-hidden border-0 glass-card group cursor-pointer">
+                    <CardContent className="p-0 flex flex-col h-full">
+                      <div className="relative h-72 w-full overflow-hidden">
+                        <Image
+                          src={project.image || "/placeholder.svg"}
+                          alt={project.title[language]}
+                          fill
+                          className="object-contain transition-transform duration-700 group-hover:scale-105"
+                          quality={90}
+                        />
                       </div>
-                    </div>
-                    <div className="p-6 flex-grow flex flex-col">
-                      <h3 className="text-xl font-bold mb-3 group-hover:text-primary-custom transition-colors">
-                        {project.title[language]}
-                      </h3>
-                      <p className="text-gray-700 dark:text-muted-custom flex-grow">{project.description[language]}</p>
-
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {project.tags.map((tag, tagIndex) => (
-                          <span
-                            key={tagIndex}
-                            className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary-custom"
-                          >
-                            {tag}
-                          </span>
-                        ))}
+                      <div className="p-6 flex-grow flex flex-col">
+                        <h3 className="text-xl font-bold mb-3 group-hover:text-primary-custom transition-colors">
+                          {project.title[language]}
+                        </h3>
+                        <p className="text-gray-700 dark:text-muted-custom flex-grow">{project.description[language]}</p>
                       </div>
-
-                      {/* <Button variant="ghost" className="mt-4 group/btn p-0 hover:bg-transparent self-start">
-                        <span className="flex items-center gap-2 text-primary-custom">
-                          {t("projects.learnMore") || "Learn more"}
-                          <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                        </span>
-                      </Button> */}
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </Slider>

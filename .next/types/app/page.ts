@@ -1,4 +1,4 @@
-// File: /Users/data/Downloads/ardent-main/app/page.tsx
+// File: C:\Users\Umar\OneDrive\Рабочий стол\ardent\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
