@@ -15,7 +15,7 @@ module.exports = {
       screens: {
         "2xl": "1400px",
         'xxl': '1285px', // yangi breakpoint
-         'sm700': '700px'
+        sm700: { max: "700px" },
       },
     },
     extend: {

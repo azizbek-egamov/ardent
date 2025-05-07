@@ -95,8 +95,8 @@ const ProjectDetails = () => {
 
   return (
     <div className="container mx-auto xl:max-w-6xl  px-4 py-16">
-      <div className="flex items-center flex-col xxl:flex-row gap-4">
-      <div className="flex flex-col sm700:w-[100%]  w-[600px]">
+      <div className="flex  flex-col xxl:flex-row gap-4">
+      <div className="flex flex-col px-4 sm700:w-[80%]  ">
       <h1 className="text-3xl font-bold">{project.title[language]}</h1>
       <p className="mt-4 text-gray-700">{project.description[language]}</p>
       <div className="mt-4 flex flex-wrap gap-2">
@@ -108,8 +108,8 @@ const ProjectDetails = () => {
       </div>
       </div>
       
-      <div className="flex items-center gap-8  flex-col sm700:flex-row">
-
+      <div className="flex flex-col md:flex-row">
+        
           <img src={project.image[0]} className="mt-8 w-80 rounded-xl h-auto " alt="" />
           <img src={project.image[1]} className="mt-8 w-80 rounded-xl h-auto" alt="" />
       </div>
