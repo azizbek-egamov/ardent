@@ -95,20 +95,10 @@ const ProjectDetails = () => {
 
   return (
     <div className="container mx-auto xl:max-w-6xl  px-4 py-16">
+      <div className="flex items-center gap-4">
+      <div className="flex flex-col w-[600px]">
       <h1 className="text-3xl font-bold">{project.title[language]}</h1>
       <p className="mt-4 text-gray-700">{project.description[language]}</p>
-      <div>
-      {/* <img src={project.image} alt={project.title[language]} className="mt-8 w-80 rounded-xl h-auto" />
-      <img src={project.image1} alt='' className="mt-8 w-80 rounded-xl h-auto" /> */}
-      
-      <div className="">
-
-          <img src={project.image[0]} className="mt-8 w-80 rounded-xl h-auto " alt="" />
-          <img src={project.image[1]} className="mt-8 w-80 rounded-xl h-auto" alt="" />
-      </div>
-      
-      
-      </div>
       <div className="mt-4 flex flex-wrap gap-2">
         {project.tags.map((tag, index) => (
           <span key={index} className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary-custom">
@@ -116,6 +106,18 @@ const ProjectDetails = () => {
           </span>
         ))}
       </div>
+      </div>
+      
+      <div className="flex items-center gap-8">
+
+          <img src={project.image[0]} className="mt-8 w-80 rounded-xl h-auto " alt="" />
+          <img src={project.image[1]} className="mt-8 w-80 rounded-xl h-auto" alt="" />
+      </div>
+      
+      </div>
+      
+      
+     
     </div>
   )
 }
