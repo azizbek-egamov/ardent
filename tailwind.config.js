@@ -14,6 +14,8 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        'xxl': '1285px', // yangi breakpoint
+         'sm700': '700px'
       },
     },
     extend: {
