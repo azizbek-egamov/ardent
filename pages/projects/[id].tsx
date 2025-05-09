@@ -161,13 +161,13 @@ const ProjectDetails = () => {
                   <div
                     key={index}
                     onClick={() => setSelectedImage(img)}
-                    className="relative w-full h-[300px] rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                    className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer"
                   >
                     <Image
                       src={img}
                       alt={`${project.title[language]} - ${index + 1}`}
                       fill
-                      className="object-cover"
+                      className="object-contain bg-white/5 backdrop-blur-sm"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       priority={index === 0}
                     />
@@ -185,9 +185,12 @@ const ProjectDetails = () => {
           className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
           onClick={handleCloseModal}
         >
-          <div className="relative w-full h-[80vh] max-w-6xl">
+          <div className="relative w-full max-w-6xl aspect-[16/9]">
             <button
-              onClick={handleCloseModal}
+              onClick={(e) => {
+                e.stopPropagation()
+                handleCloseModal()
+              }}
               className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
             >
               <svg
