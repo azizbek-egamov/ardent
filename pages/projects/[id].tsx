@@ -64,7 +64,7 @@ const ProjectDetails = () => {
           ru: "Это программное обеспечение, предназначенное для автоматизации процессов хранения, перемещения и учета товаров. Оно помогает эффективно управлять складскими операциями, оптимизировать контроль запасов и улучшить процессы доставки.",
           en: "A WMS is software designed to automate the processes of storing, moving, and tracking inventory. It helps efficiently manage warehouse operations, optimize inventory control, and improve delivery processes.",
         },
-        image: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-znVWT4bgTP57hD37iLwwKWUNo0O0jw.png","https://github.com/Mustafa00764/arr/blob/main/src/assets/images/img9.png?raw=true"],
+        image: ["/bg.jpg","https://github.com/Mustafa00764/arr/blob/main/src/assets/images/img9.png?raw=true"],
         tags: ["React", "Python", "PostgreSQL"],
       },
       {
@@ -103,8 +103,8 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-[50vh] bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4 pt-12">
         <div className="max-w-7xl mx-auto">
           {/* Back button */}
           <button
@@ -153,13 +153,13 @@ const ProjectDetails = () => {
                   <div
                     key={index}
                     onClick={() => setSelectedImage(img)}
-                    className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl dark:shadow-gray-800 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                    className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden  transform transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer"
                   >
                     <Image
                       src={img}
                       alt={`${project.title[language]} - ${index + 1}`}
                       fill
-                      className="object-contain bg-gray-50 dark:bg-gray-800"
+                      className="object-contain "
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       priority={index === 0}
                     />

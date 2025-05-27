@@ -1,4 +1,4 @@
-// File: C:\Users\Umar\OneDrive\Рабочий стол\ardent\app\layout.tsx
+// File: D:\all projects\ardent\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
